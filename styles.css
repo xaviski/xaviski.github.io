@@ -81,18 +81,6 @@ textarea {
   text-decoration: none;
 }
 
-.brand img {
-  width: 78px;
-  filter: invert(1);
-  transition: filter 180ms ease;
-}
-
-.header-light .brand img,
-.is-scrolled .brand img,
-.is-open .brand img {
-  filter: none;
-}
-
 .brand span {
   font-size: 0.78rem;
   font-weight: 700;
@@ -577,11 +565,6 @@ textarea {
   border-top: 1px solid var(--line);
 }
 
-.footer-logo {
-  width: 120px;
-  margin: 0 auto 18px;
-}
-
 .footer-nav,
 .social-row {
   display: flex;
@@ -605,18 +588,9 @@ textarea {
   border-color: currentColor;
 }
 
-.footer-badge {
-  width: 88px;
-  margin: 26px auto 0;
-}
-
 @media (max-width: 980px) {
   .site-header {
     padding: 14px 22px;
-  }
-
-  .brand img {
-    width: 64px;
   }
 
   .menu-toggle {
@@ -742,4 +716,10 @@ textarea {
   .brand span {
     font-size: 0.72rem;
   }
+}
+
+.brand img,
+.footer-logo,
+.footer-badge {
+  display: none !important;
 }
