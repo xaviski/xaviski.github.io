@@ -2,6 +2,14 @@ const header = document.querySelector("[data-header]");
 const toggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const contactForm = document.querySelector("[data-contact-form]");
+const editorialHref = "/editorial.css";
+
+if (!document.querySelector(`link[href="${editorialHref}"]`)) {
+  const editorialStyles = document.createElement("link");
+  editorialStyles.rel = "stylesheet";
+  editorialStyles.href = editorialHref;
+  document.head.append(editorialStyles);
+}
 
 const updateHeader = () => {
   if (!header) return;
